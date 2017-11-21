@@ -24,7 +24,7 @@ Then add the following to your babel configuration:
 
 ## Usage
 
-TODO: See the tests for now.
+TODO: See the tests and [this demo on AST Explorer](http://astexplorer.net/#/gist/bd0aaf31811a4f68e637c330d0472391/d7d74dcb671df9a4746910bbb939b1e6fef5cea8) for now.
 
 
 ## License
