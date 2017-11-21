@@ -1,6 +1,6 @@
 {
   "name": "babel-plugin-hyperhtml",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Compiles JSX to hyperHTML calls. ",
   "main": "index.js",
   "repository": "https://github.com/codemix/babel-plugin-hyperhtml",
@@ -26,6 +26,8 @@
   },
   "dependencies": {},
   "jest": {
-    "roots": ["<rootDir>/src/"]
+    "roots": [
+      "<rootDir>/src/"
+    ]
   }
 }
