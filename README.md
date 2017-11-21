@@ -29,4 +29,4 @@ TODO: See the tests for now.
 
 ## License
 
-Published by [https://codemix.com/](codemix) under a permissive [MIT](./LICENSE.md) license.
+Published by [codemix](https://codemix.com/) under a permissive [MIT](./LICENSE.md) license.
