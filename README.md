@@ -1,5 +1,7 @@
 # Babel Plugin HyperHTML
 
+[![Build Status](https://travis-ci.org/codemix/babel-plugin-hyperhtml.svg?branch=master)](https://travis-ci.org/codemix/babel-plugin-hyperhtml)
+
 An experimental plugin to bring JSX syntax to [hyperHTML](https://github.com/WebReflection/hyperHTML). 
 
 ## Installation
