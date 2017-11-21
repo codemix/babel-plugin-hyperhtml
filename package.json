@@ -8,7 +8,8 @@
   "license": "MIT",
   "private": false,
   "scripts": {
-    "test": "jest ---collectCoverage",
+    "test": "jest --collectCoverage",
+    "prepublish": "yarn run build",
     "build": "babel -d ./lib ./src"
   },
   "devDependencies": {
