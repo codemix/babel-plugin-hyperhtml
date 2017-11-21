@@ -1,0 +1,14 @@
+git:
+  depth: 10
+sudo: false
+language: node_js
+cache:
+  yarn: true
+
+node_js:
+  - 9
+
+script: yarn run test
+
+install:
+  - yarn install

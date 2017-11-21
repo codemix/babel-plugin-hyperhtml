@@ -1,0 +1,27 @@
+{
+  "name": "babel-plugin-hyperhtml",
+  "version": "0.0.1",
+  "description": "Compiles JSX to hyperHTML calls. ",
+  "main": "index.js",
+  "repository": "https://github.com/codemix/babel-plugin-hyperhtml",
+  "author": "Charles Pick",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "test": "jest ---collectCoverage",
+    "build": "babel -d ./lib ./src"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-jest": "^21.2.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-flow": "^6.23.0",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "flow-bin": "^0.59.0",
+    "jest": "^21.2.1",
+    "prettier": "^1.8.2"
+  },
+  "dependencies": {}
+}

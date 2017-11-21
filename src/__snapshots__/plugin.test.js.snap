@@ -1,0 +1,271 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`plugin Array Pattern as first argument 1`] = `
+"
+import * as h from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let [name] = _arg;
+      return h.wire(_arg)\`<span>Hello \${name}</span>\`;
+};"
+`;
+
+exports[`plugin Basic Component 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return hyperHTML.wire(_arg)\`<span>Hello \${name}</span>\`;
+};"
+`;
+
+exports[`plugin Builtin component with object rest 1`] = `
+"function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+import { wire, Component } from 'hyperhtml';
+
+const Demo = (_arg) => {
+      let { name } = _arg,
+          extra = _objectWithoutProperties(_arg, ['name']);
+
+      return wire(_arg)\`<div \${extra}><h1>Hi \${name}</h1></div>\`;
+};"
+`;
+
+exports[`plugin Components with multiple children 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return hyperHTML.wire(_arg)\`<h1 class=\\"yo\\"><span>Hello \${name}</span>\${new Icon({
+            name: \\"+1\\"
+      })}</h1>\`;
+};"
+`;
+
+exports[`plugin Convert block statement 1`] = `
+"
+import { wire } from 'hyperhtml';
+const Demo = (_arg) => {
+  let { name } = _arg;
+
+  const foo = true;
+  return wire(_arg)\`<div>Hello \${foo ? name : name.toUpperCase()}</div>\`;
+};"
+`;
+
+exports[`plugin Convert builtin props 1`] = `
+"
+import { wire, Component } from 'hyperhtml';
+
+const Demo = () => wire()\`<span class=\\"hello\\" visible tabindex=\${-1}/>\`;"
+`;
+
+exports[`plugin Custom Components 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return new Icon({
+            name: \\"+1\\"
+      });
+};"
+`;
+
+exports[`plugin Custom Components with a single child 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return new Foo({
+            children: [new Bar({})]
+      });
+};"
+`;
+
+exports[`plugin Custom Components with mixed children 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return new Foo({
+            children: [hyperHTML.wire(_arg)\`<span>Foo</span>\`, \\" Baz \\", new Icon({
+                  name: \\"ok\\"
+            })]
+      });
+};"
+`;
+
+exports[`plugin Custom Components with multiple children 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return new Foo({
+            children: [new Bar({}), new Baz({})]
+      });
+};"
+`;
+
+exports[`plugin Custom component with boolean property 1`] = `
+"
+import { wire } from 'hyperhtml';
+
+const Demo = () => new Jumbotron({
+      big: true
+});"
+`;
+
+exports[`plugin Custom component with object rest 1`] = `
+"var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+
+import { wire, Component } from 'hyperhtml';
+
+const Demo = (_arg) => {
+      let { name } = _arg,
+          extra = _objectWithoutProperties(_arg, ['name']);
+
+      return new Jumbotron(_extends({}, extra, {
+            children: [wire(_arg)\`<h1>Hi \${name}</h1>\`]
+      }));
+};"
+`;
+
+exports[`plugin HyperComponent 1`] = `
+"
+import { Component } from \\"hyperhtml\\";
+
+class Demo extends Component {
+  constructor(props) {
+    this.props = props;
+  }
+
+  render() {
+    return this.html\`<div>
+          <h1>Hello \${this.props.name}</h1>
+        </div>\`;
+  }
+}"
+`;
+
+exports[`plugin HyperComponent with imported namespace 1`] = `
+"
+import * as H from \\"hyperhtml\\";
+
+class Demo extends H.Component {
+  constructor(props) {
+    this.props = props;
+  }
+
+  render() {
+    return this.html\`<div>
+          <h1>Hello \${this.props.name}</h1>
+        </div>\`;
+  }
+}"
+`;
+
+exports[`plugin Ignore file with no imports 1`] = `
+"
+import React from 'react';
+const Demo = ({ name }) => React.createElement(
+    'div',
+    null,
+    name
+);"
+`;
+
+exports[`plugin Import namespace specifier 1`] = `
+"
+import * as h from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return h.wire(_arg)\`<span>Hello \${name}</span>\`;
+};"
+`;
+
+exports[`plugin Import specifier 1`] = `
+"
+import { wire } from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return wire(_arg)\`<span>Hello \${name}</span>\`;
+};"
+`;
+
+exports[`plugin MemberExpression in JSX 1`] = `
+"
+import { wire, Component } from 'hyperhtml';
+
+const Demo = props => new A.B({
+    children: [\\"Test \\", \\"Testing\\", \\" Tester\\"]
+});"
+`;
+
+exports[`plugin Multiple components 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greeter = (_arg) => {
+  let { name } = _arg;
+  return hyperHTML.wire(_arg)\`<div class=\\"greeter\\">
+      <h1>Hello \${name}!</h1>
+    </div>\`;
+};
+
+const WelcomePage = (_arg2) => {
+  let { user } = _arg2;
+  return hyperHTML.wire(_arg2)\`<article class=\\"welcome-page\\">
+      \${new Greeter({
+    name: user.name
+  })}
+    </article>\`;
+};"
+`;
+
+exports[`plugin Nested Component 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return hyperHTML.wire(_arg)\`<h1><span>Hello \${name}</span></h1>\`;
+};"
+`;
+
+exports[`plugin Nested Component with attributes 1`] = `
+"
+import hyperHTML from \\"hyperhtml\\";
+const Greet = (_arg) => {
+      let { name } = _arg;
+      return hyperHTML.wire(_arg)\`<h1 class=\\"yo\\"><span>Hello \${name}</span></h1>\`;
+};"
+`;
+
+exports[`plugin Non hyper class 1`] = `
+"
+import * as H from \\"hyperhtml\\";
+
+class Demo extends H.Component {
+  constructor(props) {
+    this.props = props;
+  }
+
+  render() {
+    return this.html\`<div>
+          <h1>Hello \${this.props.name}</h1>
+        </div>\`;
+  }
+}
+
+class Demo2 {
+  render() {
+    return H.wire()\`<div/>\`;
+  }
+}"
+`;
+
+exports[`plugin Normal var as first argument 1`] = `
+"
+import * as h from \\"hyperhtml\\";
+const Greet = props => h.wire(props)\`<span>Hello \${props.name}</span>\`;"
+`;

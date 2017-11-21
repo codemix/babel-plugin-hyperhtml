@@ -1,0 +1,15 @@
+{
+  "presets": [
+    "react",
+    "flow",
+    "stage-2",
+    [
+      "env",
+      {
+        "targets": {
+          "node": "current"
+        }
+      }
+    ]
+  ]
+}
